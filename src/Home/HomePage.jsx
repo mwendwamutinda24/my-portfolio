@@ -56,7 +56,6 @@ const HomePage=()=>{
 
          <div className="fahome">
           <h3 onClick={dropdown}><FaBars /></h3>
-          <hr/>
         </div>
 
           {showNav && (
@@ -177,4 +176,5 @@ const HomePage=()=>{
        
     )
 }
+
 export default HomePage
