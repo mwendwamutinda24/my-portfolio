@@ -3,7 +3,7 @@ import ContactMe from './Home/contactMe';
 import Header from './Home/Header';
 import HomePage from './Home/HomePage';
 import Projects from './Home/Projects';
-import Services from './Home/Services';
+import Services from './Home/services';
 import About from './Home/About';
 import MyProjects from './Home/MyProjects';
 import Intro from './Home/Intro';
@@ -33,3 +33,4 @@ function App() {
 }
 
 export default App;
+
