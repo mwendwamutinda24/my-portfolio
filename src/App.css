@@ -978,6 +978,7 @@ margin-left:30px;
   body{
     display:flex;
     flex-direction:column;
+    margin:0;
   }
   #myProjects p{
     font-size:13px;
@@ -1350,4 +1351,5 @@ margin-left:30px;
     max-width: 500px;
   }
 }
+
 
