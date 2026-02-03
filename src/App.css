@@ -383,7 +383,7 @@ hr{
 }
 .services{
   width:850px;
-  height:150;
+  height:fit-content;
   margin:30px;
   background:rgb(233, 233, 235);
   border-radius:0.7rem;
@@ -1350,3 +1350,4 @@ margin-left:30px;
     max-width: 500px;
   }
 }
+
