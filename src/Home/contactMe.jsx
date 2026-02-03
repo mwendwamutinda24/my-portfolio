@@ -53,7 +53,7 @@ const ContactMe = () => {
                 <div className="navabarr"><Link to="/"><FaHome /> Home</Link></div>
                 <div className="navabarr"><Link to="/Dashboard"><MdDashboard /> Dashboard</Link></div>
                 <div className="navabarr"><Link to="/about"><FaUser /> About</Link></div>
-                <div className="navabarr"><a href="/services"><FaCog /> Services</a></div>
+                   <div className="navabarr"><Link to="/services"><FaCog /> Services</Link></div>
                 <div className="navabarr"><Link to="/my-Projects"><FaProjectDiagram /> Projects</Link></div>
                 <div className="navabarr"><Link to="/contact"><FaEnvelope /> Contact Me</Link></div>
                 <div className="navabarr"><Link to="/Resume"><FaTachometerAlt /> My Resume</Link></div>
@@ -95,7 +95,7 @@ const ContactMe = () => {
                          <Link to="/about"><FaUser /> About</Link>
                     </div>
                       <div className="navabarr">
-                        <a href="/services"><FaCog/> Services</a>
+                          <Link to="/services"><FaCog /> Services</Link>
                     </div>
                     <div className="navabarr">
                         <Link to="/my-Projects"><FaProjectDiagram />Projects</Link>
@@ -159,3 +159,4 @@ const ContactMe = () => {
 };
 
 export default ContactMe;
+
