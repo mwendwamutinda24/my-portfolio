@@ -1011,11 +1011,11 @@ margin-left:30px;
 
   }
   .home img{
-    margin-left:-55px;
+    margin-left:-65px;
   }
   .Home1 p{
     font-size:13px;
-    margin-left:-50px;
+    margin-left:-60px;
 
   }
   .homepage p{
@@ -1025,7 +1025,7 @@ margin-left:30px;
 
   #home{
     width:100%;
-    margin-left:-55px;
+    margin-left:-65px;
   }
   .intro h1{
     font-size:20px;
@@ -1225,7 +1225,7 @@ margin-left:30px;
   .project4,
   .project6 {
     width: 90%;
-    margin: 20px auto;
+    margin: 8px auto;
     height:fit-content;
     margin-left:30px;
   }
@@ -1261,6 +1261,8 @@ margin-left:30px;
     width: 80%;
     margin: 10px auto;
   }
+  .services{
+    margin:5px;
 }
 
 
@@ -1351,5 +1353,6 @@ margin-left:30px;
     max-width: 500px;
   }
 }
+
 
 
