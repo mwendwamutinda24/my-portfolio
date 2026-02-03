@@ -82,7 +82,7 @@ const About = () => {
                  <Link to="/about"><FaUser /> About</Link>
             </div>
               <div className="navabarr">
-                <a href="/services"><FaCog/> Services</a>
+                <Link to="/services"><FaCog/> Services</Link>
             </div>
             <div className="navabarr">
                 <Link to="/my-Projects"><FaProjectDiagram />Projects</Link>
@@ -134,4 +134,5 @@ const About = () => {
 };
 
 export default About;
+
 
