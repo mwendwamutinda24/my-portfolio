@@ -121,6 +121,31 @@ const [showNav, setShowNav] = useState(false);
                <p className="toolin"><SiTailwindcss/> </p>
                 <p className="toolin">< SiJavascript/></p>
             </div>
+            <a
+  href="https://propel-company-ai-website.vercel.app/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="project4"
+>
+  <img src={aboutImg} className="pine" alt="Propel Company AI Project" />
+  <p>
+    Propel Company AI is an enterprise-grade MVP designed to build trust through clarity,
+    evidence, and minimalism. It features a precision-engineered frontend with responsive
+    navigation, hero sections, and forms that align with enterprise standards. The platform
+    integrates modern UI/UX principles to communicate reliability and professionalism,
+    serving as a foundation for AI-driven business solutions.
+    <div className="toolsin">
+      <p className="toolin"><FaReact /></p>
+      <p className="toolin"><SiTailwindcss /></p>
+      <p className="toolin"><FaNodeJs /></p>
+      <p className="toolin"><SiNextdotjs /></p>
+    </div>
+  </p>
+  <div className="overlay">
+    <span>View Project ➜</span>
+  </div>
+</a>
+
            
             
           </p>
@@ -187,4 +212,5 @@ const [showNav, setShowNav] = useState(false);
 };
 
 export default MyProjects;
+
 
