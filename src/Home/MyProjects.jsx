@@ -127,7 +127,7 @@ const [showNav, setShowNav] = useState(false);
   rel="noopener noreferrer"
   className="project4"
 >
-  <img src={aboutImg} className="pine" alt="Propel Company AI Project" />
+  <img src="/Propel.png" className="pine" alt="Propel Company AI Project" />
   <p>
     Propel Company AI is an enterprise-grade MVP designed to build trust through clarity,
     evidence, and minimalism. It features a precision-engineered frontend with responsive
@@ -212,5 +212,6 @@ const [showNav, setShowNav] = useState(false);
 };
 
 export default MyProjects;
+
 
 
