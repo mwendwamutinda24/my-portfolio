@@ -92,7 +92,7 @@ const MyProjects = () => {
             </a>
 
             {/* Propel Company AI */}
-            <a href="https://propel-company-ai-website.vercel.app/" target="_blank" rel="noopener noreferrer" className="project4">
+            <a href="https://propel-company-ai-website-zkh2.vercel.app/" target="_blank" rel="noopener noreferrer" className="project4">
               <img src="/Propel.png" className="pine" alt="Propel Company AI Project" />
               <p>
                 Propel Company AI is an enterprise-grade MVP designed to build trust through clarity,
@@ -152,3 +152,4 @@ const MyProjects = () => {
 };
 
 export default MyProjects;
+
