@@ -191,6 +191,7 @@ body{
   margin-left:5%;
   margin-top:20px;
   left:0;
+  width:100px;
   text-align:left;
 }
 .li{
@@ -1357,6 +1358,7 @@ margin-left:30px;
     max-width: 500px;
   }
 }
+
 
 
 
