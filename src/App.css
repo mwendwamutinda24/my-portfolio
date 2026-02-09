@@ -25,6 +25,9 @@ body{
 .navbar2{
   display:none;
 }
+.navbar2{
+  text-align:center;
+}
 
 .header1{
   display:block;
