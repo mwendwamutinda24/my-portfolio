@@ -1287,7 +1287,8 @@ margin-left:30px;
     margin:-20px;
   }
   .project4 .overlay{
-    margin:20px;
+    margin-left:30px;
+    margin-top:20px;
     width:100%;
   }
   #myProjects{
@@ -1295,8 +1296,8 @@ margin-left:30px;
     margin:10px;
   }
   #contact{
-    margin:15px;
-    width:100%;
+    margin:10px;
+    width:90%;
   }
 
   
@@ -1390,6 +1391,7 @@ margin-left:30px;
     max-width: 500px;
   }
 }
+
 
 
 
