@@ -1273,6 +1273,32 @@ margin-left:30px;
   .dashboard{
     margin:10px;
   }
+  .dashboard,.myProject{
+    margin:-20px;
+    width:100%;
+  }
+  .skilss,.resume-summary,.contact-info,.services{
+    width:90%;
+    margin:20px;
+  }
+  .project4{
+    width:100%;
+    margin:-20px;
+  }
+  .project4 .overlay{
+    margin:-20px;
+    width:100%;
+  }
+  #myProjects{
+    width:100%;
+    margin:10px;
+  }
+  #contact{
+    margin:15px;
+    width:100%;
+  }
+
+  
 }
 
 
@@ -1363,6 +1389,7 @@ margin-left:30px;
     max-width: 500px;
   }
 }
+
 
 
 
