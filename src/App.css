@@ -1108,6 +1108,9 @@ margin-left:30px;
   .navbars{
     margin-left:10px;
   }
+  #myProjects h2,p{
+    margin:-10px;
+  }
   .Home1 h2{
     font-size:20px;
     margin-top:20px;
@@ -1489,6 +1492,7 @@ margin-left:30px;
     max-width: 500px;
   }
 }
+
 
 
 
