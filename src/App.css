@@ -1270,6 +1270,9 @@ margin-left:30px;
     width: 80%;
     margin: 10px auto;
   }
+  .dashboard{
+    margin:10px;
+  }
 }
 
 
@@ -1360,6 +1363,7 @@ margin-left:30px;
     max-width: 500px;
   }
 }
+
 
 
 
