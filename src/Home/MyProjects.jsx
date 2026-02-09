@@ -116,7 +116,7 @@ const MyProjects = () => {
   rel="noopener noreferrer"
   className="project4"
 >
-  <img src={school} className="pine" alt="ExperBrain Application" />
+  <img src="/Experbrain.png" className="pine" alt="ExperBrain Application" />
   <p>
     ExperBrain is a trust-driven enterprise application designed to streamline
     workflows with clarity, evidence, and user trust. It integrates
@@ -175,6 +175,7 @@ const MyProjects = () => {
 };
 
 export default MyProjects;
+
 
 
 
