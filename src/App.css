@@ -1087,6 +1087,7 @@ margin-left:30px;
   }
   #myProjects p{
     font-size:13px;
+    margin:10px;
   }
   .myProject{
     width:95%;
@@ -1109,7 +1110,7 @@ margin-left:30px;
     margin-left:10px;
   }
   #myProjects h2,p{
-    margin:-10px;
+    margin:10px;
   }
   .Home1 h2{
     font-size:20px;
@@ -1388,8 +1389,6 @@ margin-left:30px;
     margin:20px;
   }
   .project4 .overlay{
-    margin-left:30px;
-    margin-top:20px;
     width:100%;
   }
   #myProjects{
@@ -1492,6 +1491,7 @@ margin-left:30px;
     max-width: 500px;
   }
 }
+
 
 
 
