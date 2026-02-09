@@ -75,7 +75,7 @@ const MyProjects = () => {
           <div className="myProject">
 
             {/* School Portal */}
-            <a href="https://kelvinportal.infinityfreeapp.com/" target="_blank" rel="noopener noreferrer" className="project4">
+            <a href="https://kelvinportal.infinityfreeapp.com/" target="_blank" rel="noopener noreferrer" className="project5">
               <img src={school} className="pine" alt="School Portal" />
               <p>
                 This is a PHP-based school portal with an interactive user interface and authentication
@@ -92,7 +92,7 @@ const MyProjects = () => {
             </a>
 
             {/* Propel Company AI */}
-            <a href="https://propel-company-ai-website-zkh2.vercel.app/" target="_blank" rel="noopener noreferrer" className="project4">
+            <a href="https://propel-company-ai-website-zkh2.vercel.app/" target="_blank" rel="noopener noreferrer" className="project5">
               <img src="/Propel.png" className="pine" alt="Propel Company AI Project" />
               <p>
                 Propel Company AI is an enterprise-grade MVP designed to build trust through clarity,
@@ -111,7 +111,7 @@ const MyProjects = () => {
             </a>
 
             {/* Pine Creative */}
-            <a href="https://pinecreative2-mw4b.vercel.app" target="_blank" rel="noopener noreferrer" className="project4">
+            <a href="https://pinecreative2-mw4b.vercel.app" target="_blank" rel="noopener noreferrer" className="project5">
               <img src={aboutImg} className="pine" alt="Pine Creative Project" />
               <p>
                 I built a custom static web platform for Pine Creative Company, designed to be the backbone
@@ -128,7 +128,7 @@ const MyProjects = () => {
             </a>
 
             {/* E-commerce Platform */}
-            <a href="https://stephenkanja.infinityfreeapp.com/" target="_blank" rel="noopener noreferrer" className="project4">
+            <a href="https://stephenkanja.infinityfreeapp.com/" target="_blank" rel="noopener noreferrer" className="project5">
               <img src={ecomerce} className="pine" alt="E-commerce Platform" />
               <p>
                 This is a Laravel-based e-commerce platform built for selling electronic products. It
@@ -152,5 +152,6 @@ const MyProjects = () => {
 };
 
 export default MyProjects;
+
 
 
