@@ -55,46 +55,7 @@ body{
   
  
 }
-/* Base styles for nav links */
-.header2 a {
-  display: block;          /* make links behave like block elements */
-  width: 90%;              /* default width */
-  margin: 0 auto;          /* center them horizontally */
-  padding: 10px;
-  text-decoration: none;
-  color: #333;
-  position: relative;      /* needed for underline pseudo-element */
-  transition: width 0.3s ease;
-}
 
-/* Hover effect: expand to full width */
-.header2 a:hover {
-  width: 100%;
-}
-
-/* Underline effect */
-.header2 a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;               /* place underline at bottom of link */
-  width: 0;
-  height: 2px;
-  background: #333;        /* underline color */
-  transition: width 0.3s ease;
-}
-
-/* On hover, underline expands to full width */
-.header2 a:hover::after {
-  width: 100%;
-}
-
-/* Responsive tweak: only apply 90% width on smaller screens */
-@media (max-width: 768px) {
-  .header2 a {
-    width: 90%;
-  }
-}
 
 .navabarr a:hover{
   color:white;
@@ -1396,6 +1357,7 @@ margin-left:30px;
     max-width: 500px;
   }
 }
+
 
 
 
