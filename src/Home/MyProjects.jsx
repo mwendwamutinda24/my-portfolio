@@ -109,29 +109,26 @@ const MyProjects = () => {
               </p>
               <div className="overlay"><span>View Project ➜</span></div>
             </a>
-            <a
-  href="https://exper-brain-4pi6.vercel.app/"
+            
+          <a
+  href="https://kelvinportal.infinityfreeapp.com/"
   target="_blank"
   rel="noopener noreferrer"
   className="project4"
 >
   <img src={school} className="pine" alt="ExperBrain Application" />
   <p>
-    ExperBrain is a trust-driven enterprise application designed to showcase how
-    AI and fullstack engineering can streamline workflows. It features a clean,
-    responsive interface and focuses on clarity, evidence, and user trust. The
-    platform integrates authentication, structured data handling, and intuitive
-    navigation to deliver a professional-grade experience. Built with Laravel
-    and MySQL on the backend, and styled with TailwindCSS and JavaScript on the
-    frontend, ExperBrain demonstrates modern engineering practices and
-    enterprise-ready design.
-    <div className="toolsin">
-      <p className="toolin"><FaNodejs/></p>
-      <p className="toolin"><FaReactjs/></p>
-      <p className="toolin"><SiTailwindcss/></p>
-      <p className="toolin"><SiJavascript/></p>
-    </div>
+    ExperBrain is a trust-driven enterprise application designed to streamline
+    workflows with clarity, evidence, and user trust. It integrates
+    authentication, structured data handling, and intuitive navigation to
+    deliver a professional-grade experience.
   </p>
+  <div className="toolsin">
+    <p className="toolin"><SiLaravel/></p>
+    <p className="toolin"><SiMysql/></p>
+    <p className="toolin"><SiTailwindcss/></p>
+    <p className="toolin"><SiJavascript/></p>
+  </div>
   <div className="overlay"><span>View Project ➜</span></div>
 </a>
 
@@ -178,6 +175,7 @@ const MyProjects = () => {
 };
 
 export default MyProjects;
+
 
 
 
