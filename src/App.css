@@ -1059,7 +1059,8 @@ margin-left:30px;
   }
   .navbar2 a{
     margin-top:2px;
-    border-bottom:2px solid black;
+    width:100%;
+    border-bottom:0.3px solid black;
   }
   .navbar2 .fahome{
     margin-left:75%;
@@ -1354,6 +1355,7 @@ margin-left:30px;
     max-width: 500px;
   }
 }
+
 
 
 
