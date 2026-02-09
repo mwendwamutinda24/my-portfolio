@@ -14,9 +14,102 @@ body{
   color:yellowgreen;
   text-decoration: underline;display:block;
 }
-.project5{
-  width:300px;
-  height:400px;
+/* General section styling */
+#myProjects {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#myProjects h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#myProjects p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Project container */
+.myProject {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Each project card */
+.project4 {
+  position: relative;
+  width: 320px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.project4:hover {
+  transform: translateY(-5px);
+}
+
+/* Project image */
+.project4 .pine {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Project description */
+.project4 p {
+  padding: 15px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* Tools row */
+.toolsin {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.toolin {
+  font-size: 1.2rem;
+  color: #1DA1F2; /* accent color */
+}
+
+/* Overlay for View Project */
+.project4 .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.project4 .overlay span {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: #1DA1F2;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+/* Show overlay only on hover */
+.project4:hover .overlay {
+  opacity: 1;
 }
 
 
@@ -1396,6 +1489,7 @@ margin-left:30px;
     max-width: 500px;
   }
 }
+
 
 
 
