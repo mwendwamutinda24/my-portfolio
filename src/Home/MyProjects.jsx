@@ -36,7 +36,7 @@ const MyProjects = () => {
             <div className="navabarr"><Link to="/services"><FaCog /> Services</Link></div>
             <div className="navabarr"><Link to="/my-Projects"><FaProjectDiagram /> Projects</Link></div>
             <div className="navabarr"><Link to="/contact"><FaEnvelope /> Contact Me</Link></div>
-            <div className="navabarr"><Link to="/Resume"><FaTachometerAlt /> My Resume</Link></div>
+            <div className="navabarr"><Link to="/Kelvin Mutinda (2).pdf"><FaTachometerAlt /> My Resume</Link></div>
           </div>
         )}
       </div>
@@ -66,7 +66,7 @@ const MyProjects = () => {
             <div className="navabarr"><Link to="/services"><FaCog/> Services</Link></div>
             <div className="navabarr"><Link to="/my-Projects"><FaProjectDiagram /> Projects</Link></div>
             <div className="navabarr"><Link to="/contact"><FaEnvelope /> Contact Me</Link></div>
-            <div className="navabarr"><Link to="/Resume"><FaTachometerAlt/> My Resume</Link></div>
+            <div className="navabarr"><Link to="/Kelvin Mutinda (2).pdf"><FaTachometerAlt/> My Resume</Link></div>
           </div>
         </section>
 
