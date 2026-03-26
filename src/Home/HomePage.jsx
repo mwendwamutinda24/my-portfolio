@@ -120,7 +120,7 @@ const HomePage=()=>{
                    </div>
                      
                         <div className="navabarr">
-                       <Link to="/Resume"><FaTachometerAlt/>My Resume</Link>
+                       <Link to="/Kelvin Mutinda (2).pdf"><FaTachometerAlt/>My Resume</Link>
                    </div>
                    </div>
 
