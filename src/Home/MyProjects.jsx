@@ -155,7 +155,7 @@ const MyProjects = () => {
 
             {/* School Portal */}
             <a href="https://stephenkanjaportal.infinityfreeapp.com/" target="_blank" rel="noopener noreferrer" className="project4">
-              <img src="./StephenKanja.png" className="pines" alt="School Portal" />
+              <img src="./StephenKanja.jpg" className="pines" alt="School Portal" />
               <p>
                 This is a PHP-based school portal with an interactive user interface and authentication
                 for managing all school activities including fee payment, academic records, storing and
