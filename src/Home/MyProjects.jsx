@@ -1,7 +1,5 @@
 import aboutImg from "../assets/About.png";
 import { FaHome, FaProjectDiagram, FaEnvelope, FaCog, FaBars, FaReact, FaNodeJs, FaTachometerAlt, FaUser } from "react-icons/fa";
-import school from "../assets/Kanja.png";
-import ecomerce from "../assets/image.png";
 import { Link } from "react-router-dom";
 import { MdDashboard } from "react-icons/md";
 import { 
@@ -19,9 +17,8 @@ import { useState } from "react";
 const projects = [
   {
     href: "https://pinecreative2-mw4b.vercel.app",
-    img: null,
-    imgSrc: null,
     importedImg: "aboutImg",
+    img: null,
     alt: "Pine Creative Project",
     title: "Pine Creative",
     tag: "Web Platform",
@@ -32,6 +29,7 @@ const projects = [
   },
   {
     href: "https://propel-company-ai-website-zkh2.vercel.app/",
+    importedImg: null,
     img: "/Propel.png",
     alt: "Propel Company AI Project",
     title: "Propel Company AI",
@@ -43,6 +41,7 @@ const projects = [
   },
   {
     href: "https://exper-brain-4pi6.vercel.app/",
+    importedImg: null,
     img: "/Experbrain.png",
     alt: "ExperBrain Application",
     title: "ExperBrain",
@@ -54,6 +53,7 @@ const projects = [
   },
   {
     href: "https://predictionsite-gr8r.vercel.app/",
+    importedImg: null,
     img: "./Ziggy Martoh.png",
     alt: "Prediction Platform",
     title: "Ziggy Match Predictions",
@@ -65,6 +65,7 @@ const projects = [
   },
   {
     href: "https://femscan.streamlit.app/",
+    importedImg: null,
     img: null,
     alt: "FemScan AI Application",
     title: "FemScan AI",
@@ -77,6 +78,7 @@ const projects = [
   },
   {
     href: "https://presidential-awards.vercel.app/",
+    importedImg: null,
     img: null,
     alt: "Presidential Awards Portal",
     title: "Presidential Awards Portal",
@@ -89,6 +91,7 @@ const projects = [
   },
   {
     href: "https://stephenkanjaportal.infinityfreeapp.com/",
+    importedImg: null,
     img: "./StephenKanja.jpg",
     alt: "School Portal",
     title: "Stephen Kanja School Portal",
@@ -100,6 +103,7 @@ const projects = [
   },
   {
     href: "https://www.usfederalaid.com/",
+    importedImg: null,
     img: "./FederalAid .png",
     alt: "Federal Aid Portal",
     title: "US Federal Aid Portal",
@@ -199,7 +203,6 @@ const MyProjects = () => {
           border: 1.5px solid rgba(255,255,255,0.7);
           padding: 9px 22px;
           border-radius: 30px;
-          backdrop-filter: blur(4px);
         }
 
         .card-new-badge {
@@ -214,7 +217,6 @@ const MyProjects = () => {
           padding: 3px 10px;
           border-radius: 20px;
           text-transform: uppercase;
-          box-shadow: 0 2px 8px rgba(34,197,94,0.35);
         }
 
         .card-body {
@@ -300,7 +302,7 @@ const MyProjects = () => {
       <div className="navbar2">
         <div className="fahome">
           <h3 onClick={dropdown}><FaBars /></h3>
-          <hr/>
+          <hr />
         </div>
 
         {showNav && (
@@ -327,7 +329,7 @@ const MyProjects = () => {
                 Kelvin Mutinda
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                   viewBox="0 0 24 24" fill="#1DA1F2">
-                  <path d="M22.25 12c0 5.65-4.6 10.25-10.25 10.25S1.75 17.65 1.75 12 6.35 1.75 12 1.75 22.25 6.35 22.25 12zm-11.5 4.5l7-7-1.5-1.5-5.5 5.5-2.5-2.5-1.5 1.5 4 4z"/>
+                  <path d="M22.25 12c0 5.65-4.6 10.25-10.25 10.25S1.75 17.65 1.75 12 6.35 1.75 12 1.75 22.25 6.35 22.25 12zm-11.5 4.5l7-7-1.5-1.5-5.5 5.5-2.5-2.5-1.5 1.5 4 4z" />
                 </svg>
               </h2>
               <p>AI | Fullstack Engineer</p>
@@ -347,57 +349,61 @@ const MyProjects = () => {
 
         <section id="myProjects">
           <h2>My Projects</h2>
-          <p>Projects I've built across Fullstack, AI, Design, and Featured work</p>
+          <p>Projects I have worked on across Fullstack, AI, Design, and Featured work</p>
           <hr />
 
           <div className="project-grid">
-            {projects.map((project, i) => (
-              
-                key={i}
-                href={project.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-card"
-              >
-                <div className="card-img-wrap">
-                  {project.importedImg === "aboutImg" ? (
-                    <img src={aboutImg} alt={project.alt} />
-                  ) : project.img ? (
-                    <img src={project.img} alt={project.alt} />
-                  ) : (
-                    <div className="card-placeholder">🖥️</div>
-                  )}
-                  {project.isNew && <span className="card-new-badge">New</span>}
-                  <div className="card-overlay">
-                    <span>View Project ➜</span>
-                  </div>
-                </div>
-
-                <div className="card-body">
-                  <div className="card-header">
-                    <p className="card-title">{project.title}</p>
-                    <span
-                      className="card-tag"
-                      style={{
-                        background: project.tagColor + "18",
-                        color: project.tagColor,
-                        border: `1px solid ${project.tagColor}33`,
-                      }}
-                    >
-                      {project.tag}
-                    </span>
+            {projects.map(function(project, i) {
+              return (
+                
+                  key={i}
+                  href={project.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-card"
+                >
+                  <div className="card-img-wrap">
+                    {project.importedImg === "aboutImg" ? (
+                      <img src={aboutImg} alt={project.alt} />
+                    ) : project.img ? (
+                      <img src={project.img} alt={project.alt} />
+                    ) : (
+                      <div className="card-placeholder">🖥️</div>
+                    )}
+                    {project.isNew && <span className="card-new-badge">New</span>}
+                    <div className="card-overlay">
+                      <span>View Project ➜</span>
+                    </div>
                   </div>
 
-                  <p className="card-desc">{project.description}</p>
+                  <div className="card-body">
+                    <div className="card-header">
+                      <p className="card-title">{project.title}</p>
+                      <span
+                        className="card-tag"
+                        style={{
+                          background: project.tagColor + "18",
+                          color: project.tagColor,
+                          border: "1px solid " + project.tagColor + "33",
+                        }}
+                      >
+                        {project.tag}
+                      </span>
+                    </div>
 
-                  <div className="card-tools">
-                    {project.tools.map((icon, j) => (
-                      <span key={j} className="card-tool-icon">{icon}</span>
-                    ))}
+                    <p className="card-desc">{project.description}</p>
+
+                    <div className="card-tools">
+                      {project.tools.map(function(icon, j) {
+                        return (
+                          <span key={j} className="card-tool-icon">{icon}</span>
+                        );
+                      })}
+                    </div>
                   </div>
-                </div>
-              </a>
-            ))}
+                </a>
+              );
+            })}
           </div>
         </section>
       </div>
