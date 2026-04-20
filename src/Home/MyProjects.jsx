@@ -24,9 +24,177 @@ const iconMap = {
   streamlit: <SiStreamlit />,
 };
 
+// Presidential Awards project — styled preview card matching the dark gold UI
+const PresidentialAwardsPreview = () => (
+  <div style={{
+    width: "100%", height: "100%",
+    background: "#0a0a0a",
+    display: "flex", flexDirection: "column",
+    fontFamily: "Georgia, serif",
+    overflow: "hidden",
+    position: "relative",
+  }}>
+    {/* Header bar */}
+    <div style={{
+      display: "flex", alignItems: "center", justifyContent: "space-between",
+      padding: "10px 14px",
+      borderBottom: "1px solid #2a2a2a",
+    }}>
+      <div>
+        <div style={{ color: "#b8962e", fontSize: "8px", letterSpacing: "2px", textTransform: "uppercase" }}>THE</div>
+        <div style={{ color: "#d4af4a", fontSize: "12px", fontWeight: "700", letterSpacing: "0.5px" }}>Presidential Annual Awards</div>
+      </div>
+      <div style={{ display: "flex", gap: "6px" }}>
+        <span style={{ background: "transparent", border: "1px solid #d4af4a", color: "#d4af4a", fontSize: "7px", padding: "3px 7px", borderRadius: "4px", letterSpacing: "1px" }}>0 VOTES CAST</span>
+        <span style={{ background: "transparent", border: "1px solid #666", color: "#999", fontSize: "7px", padding: "3px 7px", borderRadius: "4px" }}>ADMIN ↗</span>
+      </div>
+    </div>
+    {/* Nominee cards grid */}
+    <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "6px", padding: "8px 10px", flex: 1 }}>
+      {["Mariga Strong", "Jimmy", "Brayo", "Tonny"].map((name, i) => (
+        <div key={i} style={{
+          background: "#111",
+          borderRadius: "8px",
+          overflow: "hidden",
+          border: "1px solid #222",
+          display: "flex", flexDirection: "column",
+        }}>
+          <div style={{
+            height: "60px",
+            background: i === 0 ? "#1a1a1a" : `linear-gradient(135deg, #1e2a1e 0%, #2a3a2a 100%)`,
+            position: "relative",
+            display: "flex", alignItems: "flex-end", justifyContent: "center", paddingBottom: "4px",
+          }}>
+            <div style={{
+              position: "absolute", top: "4px", right: "4px",
+              background: "#222", color: "#999", fontSize: "7px",
+              width: "14px", height: "14px", borderRadius: "50%",
+              display: "flex", alignItems: "center", justifyContent: "center",
+            }}>#{i + 1}</div>
+            <span style={{ color: "#fff", fontSize: "8px", fontWeight: "600", textShadow: "0 1px 3px rgba(0,0,0,0.8)" }}>{name}</span>
+          </div>
+          <div style={{ padding: "5px 6px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <div>
+              <div style={{ color: "#d4af4a", fontSize: "10px", fontWeight: "700" }}>0</div>
+              <div style={{ color: "#666", fontSize: "7px" }}>votes</div>
+            </div>
+            <button style={{
+              background: "#d4af4a", color: "#000", fontSize: "6px",
+              fontWeight: "700", padding: "3px 6px", borderRadius: "4px",
+              border: "none", cursor: "pointer", letterSpacing: "0.5px",
+            }}>VOTE NOW</button>
+          </div>
+        </div>
+      ))}
+    </div>
+    {/* 5th card partial */}
+    <div style={{ padding: "0 10px 8px", display: "flex", gap: "6px" }}>
+      <div style={{
+        width: "calc(25% - 4.5px)",
+        background: "#111",
+        borderRadius: "8px",
+        overflow: "hidden",
+        border: "1px solid #222",
+      }}>
+        <div style={{
+          height: "60px",
+          background: "linear-gradient(135deg, #1e2a1e 0%, #2a3a2a 100%)",
+          position: "relative",
+          display: "flex", alignItems: "flex-end", justifyContent: "center", paddingBottom: "4px",
+        }}>
+          <div style={{
+            position: "absolute", top: "4px", right: "4px",
+            background: "#222", color: "#999", fontSize: "7px",
+            width: "14px", height: "14px", borderRadius: "50%",
+            display: "flex", alignItems: "center", justifyContent: "center",
+          }}>#5</div>
+          <span style={{ color: "#fff", fontSize: "8px", fontWeight: "600" }}>Bamalekei</span>
+        </div>
+        <div style={{ padding: "5px 6px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <div>
+            <div style={{ color: "#d4af4a", fontSize: "10px", fontWeight: "700" }}>0</div>
+            <div style={{ color: "#666", fontSize: "7px" }}>votes</div>
+          </div>
+          <button style={{
+            background: "#d4af4a", color: "#000", fontSize: "6px",
+            fontWeight: "700", padding: "3px 6px", borderRadius: "4px",
+            border: "none", cursor: "pointer",
+          }}>VOTE NOW</button>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+// FemScan AI project — styled preview matching dark teal UI
+const FemScanPreview = () => (
+  <div style={{
+    width: "100%", height: "100%",
+    background: "linear-gradient(135deg, #0a1f1a 0%, #0d2b22 50%, #081a14 100%)",
+    display: "flex", flexDirection: "column",
+    fontFamily: "'Segoe UI', sans-serif",
+    overflow: "hidden",
+    position: "relative",
+  }}>
+    {/* Subtle radial glow */}
+    <div style={{
+      position: "absolute", top: "30%", left: "50%", transform: "translate(-50%, -50%)",
+      width: "200px", height: "200px",
+      background: "radial-gradient(circle, rgba(16,185,129,0.12) 0%, transparent 70%)",
+      pointerEvents: "none",
+    }} />
+    {/* Nav */}
+    <div style={{
+      display: "flex", alignItems: "center", justifyContent: "space-between",
+      padding: "10px 16px",
+      borderBottom: "1px solid rgba(16,185,129,0.15)",
+    }}>
+      <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+        <span style={{ fontSize: "12px" }}>🔬</span>
+        <span style={{ color: "#6ee7b7", fontSize: "11px", fontWeight: "600" }}>FemScan AI</span>
+      </div>
+      <div style={{ display: "flex", gap: "6px" }}>
+        {["1 · Screen", "2 · Analyse", "3 · Report"].map((label, i) => (
+          <span key={i} style={{
+            background: i === 0 ? "#10b981" : "rgba(16,185,129,0.15)",
+            color: i === 0 ? "#fff" : "#6ee7b7",
+            fontSize: "8px", fontWeight: "600",
+            padding: "3px 8px", borderRadius: "20px",
+            border: `1px solid ${i === 0 ? "#10b981" : "rgba(16,185,129,0.3)"}`,
+          }}>{label}</span>
+        ))}
+      </div>
+    </div>
+    {/* Hero content */}
+    <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "12px 20px", textAlign: "center" }}>
+      <div style={{ color: "#10b981", fontSize: "8px", letterSpacing: "3px", textTransform: "uppercase", marginBottom: "10px", fontWeight: "600" }}>
+        AI-POWERED WOMEN'S HEALTH
+      </div>
+      <div style={{ color: "#fff", fontSize: "16px", fontWeight: "800", lineHeight: "1.2", marginBottom: "4px" }}>
+        Cervical Cancer Screening
+      </div>
+      <div style={{ color: "#10b981", fontSize: "16px", fontWeight: "800", marginBottom: "10px" }}>
+        Decision Support
+      </div>
+      <div style={{ color: "#9ca3af", fontSize: "9px", lineHeight: "1.6", maxWidth: "220px", marginBottom: "14px" }}>
+        FemScan AI combines cytology image analysis, HPV risk scoring, and endometriosis symptom screening into a single triage workflow.
+      </div>
+      <button style={{
+        background: "transparent",
+        border: "1.5px solid #10b981",
+        color: "#10b981",
+        fontSize: "9px", fontWeight: "600",
+        padding: "7px 18px", borderRadius: "6px",
+        cursor: "pointer", letterSpacing: "0.3px",
+      }}>Start Assessment →</button>
+    </div>
+  </div>
+);
+
 const projects = [
   {
     href: "https://pinecreative2-mw4b.vercel.app",
+    renderCustom: null,
     useImported: true,
     img: null,
     alt: "Pine Creative Project",
@@ -40,6 +208,7 @@ const projects = [
   },
   {
     href: "https://propel-company-ai-website-zkh2.vercel.app/",
+    renderCustom: null,
     useImported: false,
     img: "/Propel.png",
     alt: "Propel Company AI Project",
@@ -53,6 +222,7 @@ const projects = [
   },
   {
     href: "https://exper-brain-4pi6.vercel.app/",
+    renderCustom: null,
     useImported: false,
     img: "/Experbrain.png",
     alt: "ExperBrain Application",
@@ -66,6 +236,7 @@ const projects = [
   },
   {
     href: "https://predictionsite-gr8r.vercel.app/",
+    renderCustom: null,
     useImported: false,
     img: "/Ziggy Martoh.png",
     alt: "Prediction Platform",
@@ -79,6 +250,7 @@ const projects = [
   },
   {
     href: "https://femscan.streamlit.app/",
+    renderCustom: "femscan",
     useImported: false,
     img: null,
     alt: "FemScan AI Application",
@@ -92,6 +264,7 @@ const projects = [
   },
   {
     href: "https://presidential-awards.vercel.app/",
+    renderCustom: "presidential",
     useImported: false,
     img: null,
     alt: "Presidential Awards Portal",
@@ -105,6 +278,7 @@ const projects = [
   },
   {
     href: "https://stephenkanjaportal.infinityfreeapp.com/",
+    renderCustom: null,
     useImported: false,
     img: "/StephenKanja.jpg",
     alt: "School Portal",
@@ -118,6 +292,7 @@ const projects = [
   },
   {
     href: "https://www.usfederalaid.com/",
+    renderCustom: null,
     useImported: false,
     img: "/FederalAid.png",
     alt: "Federal Aid Portal",
@@ -134,11 +309,17 @@ const projects = [
 const MyProjects = () => {
   const [showNav, setShowNav] = useState(false);
 
-  const dropdown = function () {
+  const dropdown = () => {
     setShowNav(!showNav);
   };
 
-  const renderImage = function (project) {
+  const renderImage = (project) => {
+    if (project.renderCustom === "presidential") {
+      return <PresidentialAwardsPreview />;
+    }
+    if (project.renderCustom === "femscan") {
+      return <FemScanPreview />;
+    }
     if (project.useImported) {
       return <img src={aboutImg} alt={project.alt} />;
     }
@@ -217,6 +398,7 @@ const MyProjects = () => {
           justify-content: center;
           opacity: 0;
           transition: opacity 0.25s ease;
+          z-index: 10;
         }
         .card-overlay span {
           color: #fff;
@@ -239,6 +421,7 @@ const MyProjects = () => {
           padding: 3px 10px;
           border-radius: 20px;
           text-transform: uppercase;
+          z-index: 11;
         }
         .card-body {
           padding: 18px 20px 20px;
@@ -359,55 +542,51 @@ const MyProjects = () => {
           <hr />
 
           <div className="project-grid">
-            {projects.map(function (project, i) {
-              return (
-                
-                  key={i}
-                  href={project.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-card"
-                >
-                  <div className="card-img-wrap">
-                    {renderImage(project)}
-                    {project.isNew === true && (
-                      <span className="card-new-badge">New</span>
-                    )}
-                    <div className="card-overlay">
-                      <span>View Project ➜</span>
-                    </div>
+            {projects.map((project, i) => (
+              <a
+                key={i}
+                href={project.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-card"
+              >
+                <div className="card-img-wrap">
+                  {renderImage(project)}
+                  {project.isNew && (
+                    <span className="card-new-badge">New</span>
+                  )}
+                  <div className="card-overlay">
+                    <span>View Project ➜</span>
+                  </div>
+                </div>
+
+                <div className="card-body">
+                  <div className="card-header">
+                    <p className="card-title">{project.title}</p>
+                    <span
+                      className="card-tag"
+                      style={{
+                        background: project.tagColor + "18",
+                        color: project.tagColor,
+                        border: "1px solid " + project.tagColor + "33",
+                      }}
+                    >
+                      {project.tag}
+                    </span>
                   </div>
 
-                  <div className="card-body">
-                    <div className="card-header">
-                      <p className="card-title">{project.title}</p>
-                      <span
-                        className="card-tag"
-                        style={{
-                          background: project.tagColor + "18",
-                          color: project.tagColor,
-                          border: "1px solid " + project.tagColor + "33",
-                        }}
-                      >
-                        {project.tag}
+                  <p className="card-desc">{project.description}</p>
+
+                  <div className="card-tools">
+                    {project.tools.map((toolKey, j) => (
+                      <span key={j} className="card-tool-icon">
+                        {iconMap[toolKey]}
                       </span>
-                    </div>
-
-                    <p className="card-desc">{project.description}</p>
-
-                    <div className="card-tools">
-                      {project.tools.map(function (toolKey, j) {
-                        return (
-                          <span key={j} className="card-tool-icon">
-                            {iconMap[toolKey]}
-                          </span>
-                        );
-                      })}
-                    </div>
+                    ))}
                   </div>
-                </a>
-              );
-            })}
+                </div>
+              </a>
+            ))}
           </div>
         </section>
       </div>
