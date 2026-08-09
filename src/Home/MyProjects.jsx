@@ -24,7 +24,6 @@ const iconMap = {
   streamlit: <SiStreamlit />,
 };
 
-// Presidential Awards project — styled preview card matching the dark gold UI
 const PresidentialAwardsPreview = () => (
   <div style={{
     width: "100%", height: "100%",
@@ -34,7 +33,6 @@ const PresidentialAwardsPreview = () => (
     overflow: "hidden",
     position: "relative",
   }}>
-    {/* Header bar */}
     <div style={{
       display: "flex", alignItems: "center", justifyContent: "space-between",
       padding: "10px 14px",
@@ -49,7 +47,6 @@ const PresidentialAwardsPreview = () => (
         <span style={{ background: "transparent", border: "1px solid #666", color: "#999", fontSize: "7px", padding: "3px 7px", borderRadius: "4px" }}>ADMIN ↗</span>
       </div>
     </div>
-    {/* Nominee cards grid */}
     <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "6px", padding: "8px 10px", flex: 1 }}>
       {["Mariga Strong", "Jimmy", "Brayo", "Tonny"].map((name, i) => (
         <div key={i} style={{
@@ -87,7 +84,6 @@ const PresidentialAwardsPreview = () => (
         </div>
       ))}
     </div>
-    {/* 5th card partial */}
     <div style={{ padding: "0 10px 8px", display: "flex", gap: "6px" }}>
       <div style={{
         width: "calc(25% - 4.5px)",
@@ -126,7 +122,6 @@ const PresidentialAwardsPreview = () => (
   </div>
 );
 
-// FemScan AI project — styled preview matching dark teal UI
 const FemScanPreview = () => (
   <div style={{
     width: "100%", height: "100%",
@@ -136,14 +131,12 @@ const FemScanPreview = () => (
     overflow: "hidden",
     position: "relative",
   }}>
-    {/* Subtle radial glow */}
     <div style={{
       position: "absolute", top: "30%", left: "50%", transform: "translate(-50%, -50%)",
       width: "200px", height: "200px",
       background: "radial-gradient(circle, rgba(16,185,129,0.12) 0%, transparent 70%)",
       pointerEvents: "none",
     }} />
-    {/* Nav */}
     <div style={{
       display: "flex", alignItems: "center", justifyContent: "space-between",
       padding: "10px 16px",
@@ -165,7 +158,6 @@ const FemScanPreview = () => (
         ))}
       </div>
     </div>
-    {/* Hero content */}
     <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "12px 20px", textAlign: "center" }}>
       <div style={{ color: "#10b981", fontSize: "8px", letterSpacing: "3px", textTransform: "uppercase", marginBottom: "10px", fontWeight: "600" }}>
         AI-POWERED WOMEN'S HEALTH
@@ -326,19 +318,33 @@ const MyProjects = () => {
     if (project.img) {
       return <img src={project.img} alt={project.alt} />;
     }
-    return <div className="card-placeholder">💻</div>;
+    return <div className="mp-card-placeholder">💻</div>;
   };
 
   return (
     <>
+      {/*
+        NOTE: classes below are prefixed with "mp-" (My Projects) specifically
+        so they can't collide with any leftover global CSS from the old
+        6-project layout (e.g. old ".project-grid" / ".project-card" rules
+        with a fixed height, overflow:hidden, or an nth-child limit that
+        was capping the grid at 6 cards). Overflow/height are also forced
+        to "visible"/"auto" as a safety net.
+      */}
       <style>{`
-        .project-grid {
+        #myProjects, .mp-grid {
+          overflow: visible !important;
+          max-height: none !important;
+          height: auto !important;
+        }
+        .mp-grid {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          grid-auto-rows: auto;
           gap: 28px;
           padding: 12px 0 40px;
         }
-        .project-card {
+        .mp-card {
           position: relative;
           border-radius: 16px;
           overflow: hidden;
@@ -352,20 +358,20 @@ const MyProjects = () => {
           color: inherit;
           cursor: pointer;
         }
-        .project-card:hover {
+        .mp-card:hover {
           transform: translateY(-5px);
           box-shadow: 0 12px 32px rgba(0,0,0,0.13);
         }
-        .project-card:hover .card-overlay {
+        .mp-card:hover .mp-card-overlay {
           opacity: 1;
         }
-        .project-card:hover .card-img-wrap img {
+        .mp-card:hover .mp-card-img-wrap img {
           transform: scale(1.04);
         }
-        .project-card:hover .card-tool-icon {
+        .mp-card:hover .mp-card-tool-icon {
           color: #444;
         }
-        .card-img-wrap {
+        .mp-card-img-wrap {
           position: relative;
           width: 100%;
           height: 195px;
@@ -373,14 +379,14 @@ const MyProjects = () => {
           overflow: hidden;
           flex-shrink: 0;
         }
-        .card-img-wrap img {
+        .mp-card-img-wrap img {
           width: 100%;
           height: 100%;
           object-fit: cover;
           display: block;
           transition: transform 0.35s ease;
         }
-        .card-placeholder {
+        .mp-card-placeholder {
           width: 100%;
           height: 100%;
           display: flex;
@@ -389,7 +395,7 @@ const MyProjects = () => {
           font-size: 52px;
           opacity: 0.2;
         }
-        .card-overlay {
+        .mp-card-overlay {
           position: absolute;
           inset: 0;
           background: rgba(10,10,30,0.55);
@@ -400,7 +406,7 @@ const MyProjects = () => {
           transition: opacity 0.25s ease;
           z-index: 10;
         }
-        .card-overlay span {
+        .mp-card-overlay span {
           color: #fff;
           font-size: 15px;
           font-weight: 600;
@@ -409,7 +415,7 @@ const MyProjects = () => {
           padding: 9px 22px;
           border-radius: 30px;
         }
-        .card-new-badge {
+        .mp-card-new-badge {
           position: absolute;
           top: 12px;
           right: 12px;
@@ -423,27 +429,27 @@ const MyProjects = () => {
           text-transform: uppercase;
           z-index: 11;
         }
-        .card-body {
+        .mp-card-body {
           padding: 18px 20px 20px;
           display: flex;
           flex-direction: column;
           gap: 10px;
           flex: 1;
         }
-        .card-header {
+        .mp-card-header {
           display: flex;
           align-items: flex-start;
           justify-content: space-between;
           gap: 10px;
         }
-        .card-title {
+        .mp-card-title {
           font-size: 16px;
           font-weight: 700;
           color: #111;
           margin: 0;
           line-height: 1.3;
         }
-        .card-tag {
+        .mp-card-tag {
           font-size: 11px;
           font-weight: 600;
           padding: 3px 10px;
@@ -451,14 +457,14 @@ const MyProjects = () => {
           white-space: nowrap;
           flex-shrink: 0;
         }
-        .card-desc {
+        .mp-card-desc {
           font-size: 13.5px;
           color: #555;
           line-height: 1.65;
           margin: 0;
           flex: 1;
         }
-        .card-tools {
+        .mp-card-tools {
           display: flex;
           align-items: center;
           gap: 10px;
@@ -467,7 +473,7 @@ const MyProjects = () => {
           border-top: 1px solid #f0f0f0;
           margin-top: 4px;
         }
-        .card-tool-icon {
+        .mp-card-tool-icon {
           font-size: 18px;
           color: #888;
           transition: color 0.2s;
@@ -541,30 +547,30 @@ const MyProjects = () => {
           <p>Projects I have worked on across Fullstack, AI, Design, and Featured work</p>
           <hr />
 
-          <div className="project-grid">
+          <div className="mp-grid">
             {projects.map((project, i) => (
-              <a
+              
                 key={i}
                 href={project.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="project-card"
+                className="mp-card"
               >
-                <div className="card-img-wrap">
+                <div className="mp-card-img-wrap">
                   {renderImage(project)}
                   {project.isNew && (
-                    <span className="card-new-badge">New</span>
+                    <span className="mp-card-new-badge">New</span>
                   )}
-                  <div className="card-overlay">
+                  <div className="mp-card-overlay">
                     <span>View Project ➜</span>
                   </div>
                 </div>
 
-                <div className="card-body">
-                  <div className="card-header">
-                    <p className="card-title">{project.title}</p>
+                <div className="mp-card-body">
+                  <div className="mp-card-header">
+                    <p className="mp-card-title">{project.title}</p>
                     <span
-                      className="card-tag"
+                      className="mp-card-tag"
                       style={{
                         background: project.tagColor + "18",
                         color: project.tagColor,
@@ -575,11 +581,11 @@ const MyProjects = () => {
                     </span>
                   </div>
 
-                  <p className="card-desc">{project.description}</p>
+                  <p className="mp-card-desc">{project.description}</p>
 
-                  <div className="card-tools">
+                  <div className="mp-card-tools">
                     {project.tools.map((toolKey, j) => (
-                      <span key={j} className="card-tool-icon">
+                      <span key={j} className="mp-card-tool-icon">
                         {iconMap[toolKey]}
                       </span>
                     ))}
@@ -590,8 +596,3 @@ const MyProjects = () => {
           </div>
         </section>
       </div>
-    </>
-  );
-};
-
-export default MyProjects;
