@@ -1,27 +1,40 @@
 import aboutImg from "../assets/About.png";
 import {
   FaHome, FaProjectDiagram, FaEnvelope, FaCog, FaBars,
-  FaReact, FaNodeJs, FaTachometerAlt, FaUser
+  FaReact, FaNodeJs, FaTachometerAlt, FaUser, FaCode,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { MdDashboard } from "react-icons/md";
 import {
   SiMysql, SiLaravel, SiTailwindcss, SiNextdotjs,
-  SiJavascript, SiPython, SiStreamlit
+  SiJavascript, SiPython, SiStreamlit,
+  SiExpress, SiCloudinary, SiSupabase, SiMongodb,
+  SiTensorflow, SiScikitlearn, SiPhp,
 } from "react-icons/si";
 import homeImg from "../assets/image3.JPG";
 import { useState } from "react";
 
-const iconMap = {
-  nodejs: <FaNodeJs />,
-  react: <FaReact />,
-  tailwind: <SiTailwindcss />,
-  javascript: <SiJavascript />,
-  mysql: <SiMysql />,
-  laravel: <SiLaravel />,
-  nextjs: <SiNextdotjs />,
-  python: <SiPython />,
-  streamlit: <SiStreamlit />,
+// Tech-stack badge metadata: icon + brand color per technology.
+// Techs without an official brand icon (AJAX, Pylance) fall back to a generic code icon.
+const TECH_META = {
+  react: { label: "React", icon: <FaReact />, color: "#61DAFB" },
+  nodejs: { label: "Node.js", icon: <FaNodeJs />, color: "#3C873A" },
+  tailwind: { label: "Tailwind CSS", icon: <SiTailwindcss />, color: "#38BDF8" },
+  javascript: { label: "JavaScript", icon: <SiJavascript />, color: "#CA9A00" },
+  mysql: { label: "MySQL", icon: <SiMysql />, color: "#4479A1" },
+  laravel: { label: "Laravel", icon: <SiLaravel />, color: "#FF2D20" },
+  nextjs: { label: "Next.js", icon: <SiNextdotjs />, color: "#000000" },
+  python: { label: "Python", icon: <SiPython />, color: "#3776AB" },
+  streamlit: { label: "Streamlit", icon: <SiStreamlit />, color: "#FF4B4B" },
+  express: { label: "Express", icon: <SiExpress />, color: "#4B5563" },
+  cloudinary: { label: "Cloudinary", icon: <SiCloudinary />, color: "#3448C5" },
+  supabase: { label: "Supabase", icon: <SiSupabase />, color: "#3ECF8E" },
+  mern: { label: "MERN Stack", icon: <SiMongodb />, color: "#47A248" },
+  tensorflow: { label: "TensorFlow", icon: <SiTensorflow />, color: "#FF6F00" },
+  scikitlearn: { label: "scikit-learn", icon: <SiScikitlearn />, color: "#F7931E" },
+  php: { label: "PHP", icon: <SiPhp />, color: "#777BB4" },
+  ajax: { label: "AJAX", icon: <FaCode />, color: "#2965F1" },
+  pylance: { label: "Pylance", icon: <FaCode />, color: "#306998" },
 };
 
 const PresidentialAwardsPreview = () => {
@@ -343,7 +356,7 @@ const projects = [
     tagColor: "#1DA1F2",
     description:
       "A custom static web platform for Pine Creative Company, the backbone of their services like web development, videography, and film production. Features a modern UI, full mobile responsiveness, and fast performance.",
-    tools: ["nodejs", "react", "tailwind", "javascript"],
+    stack: ["nextjs", "cloudinary", "supabase", "express"],
     isNew: false,
   },
   {
@@ -357,7 +370,7 @@ const projects = [
     tagColor: "#7C3AED",
     description:
       "An enterprise-grade MVP designed to build trust through clarity, evidence, and minimalism. Features precision-engineered frontend with responsive navigation, hero sections, and forms aligned with enterprise standards.",
-    tools: ["react", "tailwind", "nodejs", "nextjs"],
+    stack: ["react", "tailwind", "nodejs", "nextjs"],
     isNew: false,
   },
   {
@@ -371,7 +384,7 @@ const projects = [
     tagColor: "#0F6E56",
     description:
       "A trust-driven enterprise application designed to streamline workflows with clarity, evidence, and user trust. Integrates authentication, structured data handling, and intuitive navigation for a professional-grade experience.",
-    tools: ["laravel", "mysql", "tailwind", "javascript"],
+    stack: ["mern", "python", "scikitlearn"],
     isNew: false,
   },
   {
@@ -385,7 +398,7 @@ const projects = [
     tagColor: "#D85A30",
     description:
       "A full-stack MERN prediction platform for seamless match insights and user engagement. Combines robust backend logic with a sleek responsive interface, secure data handling, and real-time updates for admins and users.",
-    tools: ["nodejs", "react", "tailwind", "javascript"],
+    stack: ["mern", "react", "tailwind", "express", "nodejs"],
     isNew: false,
   },
   {
@@ -399,7 +412,7 @@ const projects = [
     tagColor: "#D4537E",
     description:
       "An AI-powered health screening tool built with Python and Streamlit that assists in early detection of cervical and breast cancer. Leverages machine learning models to provide instant risk assessments, empowering women with accessible, data-driven health insights.",
-    tools: ["python", "streamlit"],
+    stack: ["python", "tensorflow", "pylance"],
     isNew: true,
   },
   {
@@ -413,7 +426,7 @@ const projects = [
     tagColor: "#185FA5",
     description:
       "A prestigious digital platform for managing and showcasing Presidential Award nominations, recipients, and ceremonies. Features secure admin controls, nominee tracking, real-time status updates, and a public-facing gallery of award laureates.",
-    tools: ["react", "nodejs", "tailwind", "javascript"],
+    stack: ["mern", "react", "tailwind", "express", "nodejs"],
     isNew: true,
   },
   {
@@ -427,7 +440,7 @@ const projects = [
     tagColor: "#639922",
     description:
       "A PHP-based school portal with interactive UI and authentication for managing school activities including fee payment, academic records, storing and retrieving results for learners, and tracking their progress.",
-    tools: ["react", "nodejs", "tailwind", "javascript"],
+    stack: ["php", "mysql", "javascript", "ajax"],
     isNew: false,
   },
   {
@@ -441,7 +454,7 @@ const projects = [
     tagColor: "#533AB7",
     description:
       "A secure platform for managing student financial aid applications, tracking eligibility, processing awards, and offering real-time updates. Integrates authentication, responsive UI, and a robust backend for smooth aid record handling.",
-    tools: ["react", "nodejs", "tailwind", "javascript"],
+    stack: ["react", "nodejs", "tailwind", "javascript"],
     isNew: false,
   },
 ];
@@ -453,20 +466,21 @@ const cardStyles = [
   ".mp-card:hover { transform: translateY(-5px); box-shadow: 0 12px 32px rgba(0,0,0,0.13); }",
   ".mp-card:hover .mp-card-overlay { opacity: 1; }",
   ".mp-card:hover .mp-card-img-wrap img { transform: scale(1.04); }",
-  ".mp-card:hover .mp-card-tool-icon { color: #444; }",
   ".mp-card-img-wrap { position: relative; width: 100%; height: 195px; background: linear-gradient(135deg, #f3f4f6 0%, #e9eaf0 100%); overflow: hidden; flex-shrink: 0; }",
   ".mp-card-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.35s ease; }",
   ".mp-card-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 52px; opacity: 0.2; }",
   ".mp-card-overlay { position: absolute; inset: 0; background: rgba(10,10,30,0.55); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.25s ease; z-index: 10; }",
   ".mp-card-overlay span { color: #fff; font-size: 15px; font-weight: 600; letter-spacing: 0.3px; border: 1.5px solid rgba(255,255,255,0.7); padding: 9px 22px; border-radius: 30px; }",
   ".mp-card-new-badge { position: absolute; top: 12px; right: 12px; background: #22c55e; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; z-index: 11; }",
-  ".mp-card-body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }",
+  ".mp-card-body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 12px; flex: 1; }",
   ".mp-card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }",
   ".mp-card-title { font-size: 16px; font-weight: 700; color: #111; margin: 0; line-height: 1.3; }",
   ".mp-card-tag { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; }",
   ".mp-card-desc { font-size: 13.5px; color: #555; line-height: 1.65; margin: 0; flex: 1; }",
-  ".mp-card-tools { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding-top: 6px; border-top: 1px solid #f0f0f0; margin-top: 4px; }",
-  ".mp-card-tool-icon { font-size: 18px; color: #888; transition: color 0.2s; }",
+  ".mp-stack-row { display: flex; flex-wrap: wrap; gap: 6px; padding-top: 10px; border-top: 1px solid #f0f0f0; }",
+  ".mp-tech-pill { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 600; padding: 4px 9px 4px 7px; border-radius: 20px; line-height: 1; transition: transform 0.15s ease, box-shadow 0.15s ease; white-space: nowrap; }",
+  ".mp-card:hover .mp-tech-pill { transform: translateY(-1px); }",
+  ".mp-tech-pill svg { font-size: 13px; flex-shrink: 0; }",
   "#myProjects h2 { font-size: 2rem; font-weight: 800; color: #111; margin-bottom: 6px; }",
   "#myProjects > p { color: #666; font-size: 15px; margin-bottom: 20px; }",
   "#myProjects hr { border: none; border-top: 2px solid #eee; margin-bottom: 28px; }",
@@ -642,12 +656,25 @@ const MyProjects = () => {
 
                   <p className="mp-card-desc">{project.description}</p>
 
-                  <div className="mp-card-tools">
-                    {project.tools.map((toolKey, j) => (
-                      <span key={j} className="mp-card-tool-icon">
-                        {iconMap[toolKey]}
-                      </span>
-                    ))}
+                  <div className="mp-stack-row">
+                    {project.stack.map((techKey) => {
+                      const tech = TECH_META[techKey];
+                      if (!tech) return null;
+                      return (
+                        <span
+                          key={techKey}
+                          className="mp-tech-pill"
+                          style={{
+                            background: tech.color + "16",
+                            color: tech.color,
+                            border: "1px solid " + tech.color + "40",
+                          }}
+                        >
+                          {tech.icon}
+                          {tech.label}
+                        </span>
+                      );
+                    })}
                   </div>
                 </div>
               </a>
