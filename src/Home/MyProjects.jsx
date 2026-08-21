@@ -447,7 +447,7 @@ const projects = [
     href: "https://www.usfederalaid.com/",
     renderCustom: null,
     useImported: false,
-    img: "/FederalAid.png",
+    img: "/federal.png",
     alt: "Federal Aid Portal",
     title: "US Federal Aid Portal",
     tag: "MERN · FinTech",
