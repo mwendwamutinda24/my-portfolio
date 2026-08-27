@@ -402,6 +402,20 @@ const projects = [
     isNew: false,
   },
   {
+    href: "https://trialbal-two.vercel.app/",
+    renderCustom: null,
+    useImported: false,
+    img: null,
+    alt: "Trialbal School Financial Management",
+    title: "Trialbal",
+    tag: "EdTech · FinTech",
+    tagColor: "#0EA5E9",
+    description:
+      "A school financial management system for building trial balances, financial statements, and IPSAS-compliant reports. Supports Excel upload and manual row entry, auto-computes financial statements from trial balance data, and generates polished Word document reports.",
+    stack: ["react", "nodejs", "express", "mern"],
+    isNew: true,
+  },
+  {
     href: "https://femscan.streamlit.app/",
     renderCustom: "femscan",
     useImported: false,
